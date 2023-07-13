@@ -1,0 +1,71 @@
+# REGRESSION
+from sklearn.ensemble import AdaBoostRegressor
+from sklearn.ensemble import BaggingRegressor
+from sklearn.ensemble import ExtraTreesRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import RidgeCV #(cv=5)
+from sklearn.linear_model import ElasticNet
+from sklearn.linear_model import ElasticNetCV # (cv=5)
+from sklearn.linear_model import Lars
+from sklearn.linear_model import LarsCV #(cv=5)
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import LassoCV #(cv=5)
+from sklearn.linear_model import LassoLars
+from sklearn.linear_model import LassoLarsCV #(cv=5)
+from sklearn.linear_model import ARDRegression
+from sklearn.linear_model import BayesianRidge
+from sklearn.linear_model import PoissonRegressor
+from sklearn.linear_model import TweedieRegressor
+from sklearn.linear_model import GammaRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neighbors import RadiusNeighborsRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.svm import LinearSVR #(need pipeline)
+from sklearn.svm import NuSVR #(need pipeline)
+from sklearn.svm import SVR #(need pipeline)
+from sklearn.tree import DecisionTreeRegressor
+
+# CLASSIFICATION
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import BaggingClassifier
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegressionCV # (cv=5)
+from sklearn.linear_model import PassiveAggressiveClassifier
+from sklearn.linear_model import Perceptron
+from sklearn.linear_model import RidgeClassifier
+from sklearn.linear_model import RidgeClassifierCV
+from sklearn.linear_model import SGDClassifier # (need pipeline)
+from sklearn.linear_model import SGDOneClassSVM
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.naive_bayes import CategoricalNB
+from sklearn.naive_bayes import ComplementNB
+from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import RadiusNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.svm import LinearSVC
+from sklearn.svm import NuSVC
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+
+# SPLIT
+from sklearn.model_selection import train_test_split
+
+# SCALE
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+
+
+# DATAFRAME
+import pandas as pd
