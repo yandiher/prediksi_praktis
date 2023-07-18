@@ -43,7 +43,6 @@ def tumpukan_regresi (x, y, scaler='minmax'):
     from sklearn.linear_model import GammaRegressor
     from sklearn.neighbors import KNeighborsRegressor
     from sklearn.neighbors import RadiusNeighborsRegressor
-    from sklearn.neural_network import MLPRegressor
     from sklearn.svm import LinearSVR #(need pipeline)
     from sklearn.svm import NuSVR #(need pipeline)
     from sklearn.svm import SVR #(need pipeline)
@@ -53,7 +52,7 @@ def tumpukan_regresi (x, y, scaler='minmax'):
     from sklearn.metrics import r2_score
 
     # split data into train and test
-    x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, random_state=42, stratify=y)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, random_state=42)
     
     # choosing the scaler
     if scaler == 'standard':
@@ -92,7 +91,6 @@ def tumpukan_regresi (x, y, scaler='minmax'):
         GammaRegressor(),
         KNeighborsRegressor(),
         RadiusNeighborsRegressor(),
-        MLPRegressor(max_iter=500),
         LinearSVR(),
         NuSVR(),
         SVR(),
@@ -125,7 +123,6 @@ def tumpukan_regresi (x, y, scaler='minmax'):
         'GammaRegressor',
         'KNeighborsRegressor',
         'RadiusNeighborsRegressor',
-        'MLPRegressor',
         'LinearSVR',
         'NuSVR',
         'SVR',
@@ -194,9 +191,7 @@ def tumpukan_klasifikasi (x, y, scaler='minmax'):
     from sklearn.naive_bayes import MultinomialNB
     from sklearn.neighbors import KNeighborsClassifier
     from sklearn.neighbors import RadiusNeighborsClassifier
-    from sklearn.neural_network import MLPClassifier
     from sklearn.svm import LinearSVC
-    from sklearn.svm import NuSVC
     from sklearn.svm import SVC
     from sklearn.tree import DecisionTreeClassifier
 
@@ -237,7 +232,6 @@ def tumpukan_klasifikasi (x, y, scaler='minmax'):
         MultinomialNB(),
         KNeighborsClassifier(),
         RadiusNeighborsClassifier(),
-        MLPClassifier(max_iter=500),
         LinearSVC(),
         SVC(),
         DecisionTreeClassifier()]
@@ -263,7 +257,6 @@ def tumpukan_klasifikasi (x, y, scaler='minmax'):
         'MultinomialNB',
         'KNeighborsClassifier',
         'RadiusNeighborsClassifier',
-        'MLPClassifier',
         'LinearSVC',
         'SVC',
         'DecisionTreeClassifier']
@@ -488,8 +481,36 @@ def regresi(x_train, x_test, y_train, y_test, regressor='linear_regression', sav
 # KLASIFIKASI
 def klasifikasi(x_train, x_test, y_train, y_test, classifier='logistic_regression', save='no'):
     """
-    input: x_train, x_test, y_train, y_test, dan classifier
-    return: score
+    fungsi ini ngasih algoritma atau skornya.
+    masukin xy train dan test biar gampang.
+    pilih classifiernya. defaultnya logistic_regression.
+    
+    pilihannya ada ada_boost_classification,
+    bagging_classification,
+    extra_trees_classification,
+    gradient_boosting_classification,
+    random_forest_classification,
+    hist_gradient_boosting_classification,
+    gaussian_process_classification,
+    logistic_regression_cv,
+    passive_aggresive_classification,
+    perceptron,
+    ridge_classification,
+    ridge_cv_classification,
+    sgd_classification,
+    sgd_one_svm,
+    bernoulli_nb,
+    categorical_nb,
+    complement_nb,
+    gaussian_nb,
+    multinomial_nb,
+    kneighbors_classification,
+    radius_neighbors_classification,
+    mlp_classification,
+    linear_svc,
+    nu_svc,
+    svc,
+    decision_tree_classification
     """
     # MODEL
     import joblib
